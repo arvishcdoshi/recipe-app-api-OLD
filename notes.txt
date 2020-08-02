@@ -8,3 +8,5 @@ to run specific thing with compose
 
 
 EXAMPLE :- docket-compose run app sh -c "python manage.py test && flake8"
+
+Example
