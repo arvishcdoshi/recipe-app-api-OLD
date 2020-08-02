@@ -1,5 +1,5 @@
 FROM python:3.7-alpine
-MAINTAINER Arvish Doshi
+LABEL maintainer = "Arvish Doshi"
 
 ENV PYTHONUNBUFFERED 1
 

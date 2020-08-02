@@ -1,0 +1,10 @@
+to run Dockerfile(required only once)
+docker-build .
+
+to run compose file
+docker-compose build
+
+to run specific thing with compose
+
+
+EXAMPLE :- docket-compose run app sh -c "python manage.py test && flake8"
