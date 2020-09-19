@@ -20,3 +20,14 @@ command: >
       sh -c "python manage.py runserver 0.0.0.0:8000" 
 
 --> Above line in the docker-compose.yml file will run the Django development server available on all the IP addresses that run on Docker
+
+Manager class is a class that provides helper functions for creating a user or creating a super user
+
+BASEUSER-MANAGER
+--> In the UserManager, we put password = None in case we want to create a user that is not active that doesn't have a password
+
+--> **extra_fields --> This says that take any of the extra functions that are passed in when you call create_user and pass them into 
+extra_fields so that we can then just add any additional fields that we create without user model
+
+It's not required but it just makes our function a little bit more flexible because every time we add new fields to our user, we don't 
+have to add them in arguments, we can just add them Ad-Hoc as we add them to our model
