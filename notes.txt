@@ -14,3 +14,9 @@ DRF Serializers are used to provide validation on all requests to our API and to
 
 Alpine image is lightweight version of Docker.. which runs Python3.7
 
+Docker compose is a tool that allows us to run our docker image easily from our project location
+
+command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000" 
+
+--> Above line in the docker-compose.yml file will run the Django development server available on all the IP addresses that run on Docker
