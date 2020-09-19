@@ -7,6 +7,10 @@ docker-compose build
 to run specific thing with compose
 
 
-EXAMPLE :- docket-compose run app sh -c "python manage.py test && flake8"
+EXAMPLE :- docker-compose run app sh -c "python manage.py test && flake8"
 
-Example
+DRF Viewsets are used to create the structure of our API and provide all of the neccessary endpoints for managing objects.
+DRF Serializers are used to provide validation on all requests to our API and to help convert JSON objects to Django database models
+
+Alpine image is lightweight version of Docker.. which runs Python3.7
+
