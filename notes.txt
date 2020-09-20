@@ -31,3 +31,19 @@ extra_fields so that we can then just add any additional fields that we create w
 
 It's not required but it just makes our function a little bit more flexible because every time we add new fields to our user, we don't 
 have to add them in arguments, we can just add them Ad-Hoc as we add them to our model
+
+SETUP function --> It is a function that is ran before every test that we run
+
+Explanation of setUp function in test_admins:
+--> Our setUp function is going to consist of creating our test client and we're going to add a new user that we can use to test.
+ We will make sure the user is logged into our client and finally we're going to create a regular user that is not authenticated 
+ or that we can use to list in our admin page
+
+
+ *** from django.utils.translation import gettext as _
+
+Above import statement is the recommended convention for converting strings in Python to human-readable text and the reason we do 
+this is just so it gets passed through the translation engine. If we want the code to support multiple languages, then this would make 
+it a lot easier for us to do
+
+We basically setup the translation files and then it will  convert the text appropriately 
