@@ -47,3 +47,18 @@ this is just so it gets passed through the translation engine. If we want the co
 it a lot easier for us to do
 
 We basically setup the translation files and then it will  convert the text appropriately 
+
+
+We want our app service to depend on the database service that we create.It means two things. 
+1) The database service will  start before the app. 
+2) It means the database service will be available via network when you use the hostname 'db'. 
+
+So when we're inside our app service, we can connect to the hostname 'db' and then it will connect 
+to whatever container is running on our 'db' service.
+
+from unittest.mock import patch
+# allows us to mock the behaviour of the Django get database function. We can basically simulate the database
+being available or not being available for when we test our command
+
+from django.core.management import call_command
+# This function would allow us to call the command in our source code
