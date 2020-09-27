@@ -9,6 +9,9 @@ to run specific thing with compose
 
 EXAMPLE :- docker-compose run app sh -c "python manage.py test && flake8"
 
+To start the docker compose server
+>> docker-compose up
+
 DRF Viewsets are used to create the structure of our API and provide all of the neccessary endpoints for managing objects.
 DRF Serializers are used to provide validation on all requests to our API and to help convert JSON objects to Django database models
 
@@ -62,3 +65,11 @@ being available or not being available for when we test our command
 
 from django.core.management import call_command
 # This function would allow us to call the command in our source code
+
+Whenever we're overriding the validate function, we must return values at the end,
+once the validation is successful
+****
+attrs['user'] = user
+return attrs
+****
+
