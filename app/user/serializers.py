@@ -18,6 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         """Update a user, setting the password correctly and return it"""
         password = validated_data.pop('password', None)
+        # super() will call the model serializer's update function, i.e. the default one
         user = super().update(instance, validated_data)
 
         if password:
