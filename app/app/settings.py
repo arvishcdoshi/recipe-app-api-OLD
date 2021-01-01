@@ -108,12 +108,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'core.renderers.EmberJSONRenderer',
-    ),
-    'EXCEPTION_HANDLER': 'core.common.custom_exception_handler',
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'core.renderers.EmberJSONRenderer',
+#     ),
+#     'EXCEPTION_HANDLER': 'core.common.custom_exception_handler',
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
