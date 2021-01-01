@@ -38,3 +38,10 @@ class RecipeSerializer(serializers.ModelSerializer):
         # Ingredients and tags are not the part of serializer, they reference to ingredient and tags models, we need to define them
         # as special fields
         read_only_fields = ('id',)
+
+
+class RecipeDetailSerializer(RecipeSerializer):
+    """Serialize a recipe detail"""
+    ingredients = IngredientSerializer(many=True, read_only=True)
+    tags = TagSerializer(many=True, read_only=True)
+
